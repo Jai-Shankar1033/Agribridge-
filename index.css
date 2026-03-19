@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevent scrollbar during loading */
+  overflow-x: hidden;
+}
+
+/* --- APP LOADING ANIMATIONS --- */
+
+/* 1. The Progress Bar Animation */
+@keyframes progress-glow {
+  0% { 
+    width: 0%; 
+    opacity: 0.7; 
+  }
+  50% { 
+    opacity: 1; 
+  }
+  100% { 
+    width: 100%; 
+    opacity: 1; 
+  }
+}
+
+.animate-progress-glow {
+  animation: progress-glow 2.5s ease-in-out forwards;
+}
+
+/* 2. Entrance Fade (For the Main Dashboard) */
+@keyframes dashboard-fade {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-dashboard-in {
+  animation: dashboard-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 3. Subtle Pulse for Branding */
+@keyframes soft-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-slow {
+  animation: soft-pulse 3s infinite ease-in-out;
+}
+
+/* --- UTILITY CLASSES --- */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
